@@ -1,5 +1,7 @@
 # AI Applications in Textile-Garment Industry
 
+> A comprehensive collection of AI/ML solutions for textile manufacturing, including defect detection, demand forecasting, and worker assistance systems.
+
 This repository contains various AI/ML applications focused on solving challenges in the textile and garment industry. The projects demonstrate the practical implementation of artificial intelligence in different aspects of textile manufacturing and quality control.
 
 ## Projects Overview
