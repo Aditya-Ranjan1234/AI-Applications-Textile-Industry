@@ -13,6 +13,8 @@ This project implements a real-time defect detection system for textile manufact
 - Multiple defect type classification
 - Easy integration with existing systems
 - GPU acceleration support
+- Automatic checkpoint saving
+- Training resume capability
 
 ## Dataset
 
@@ -48,6 +50,29 @@ Training parameters can be modified in `train.py`:
 - Number of epochs
 - Augmentation settings
 
+### Using Saved Models
+
+The training process automatically saves two model checkpoints in `runs/train/textile_defect/weights/`:
+- `best.pt`: Model with best performance
+- `last.pt`: Model from last completed epoch
+
+To use a saved model:
+```python
+from ultralytics import YOLO
+
+# Load the best model
+model = YOLO('runs/train/textile_defect/weights/best.pt')
+
+# Make predictions
+results = model.predict('path/to/image.jpg')
+```
+
+To resume training from a checkpoint:
+```python
+model = YOLO('runs/train/textile_defect/weights/last.pt')
+model.train(resume=True)
+```
+
 ### Inference
 
 To run inference on new images:
@@ -77,6 +102,13 @@ textile-damage-detection/
 ├── valid/              # Validation images and labels
 ├── test/               # Test images and labels
 ├── runs/               # Training outputs and logs
+│   └── train/
+│       └── textile_defect/
+│           ├── weights/    # Model checkpoints
+│           │   ├── best.pt # Best performing model
+│           │   └── last.pt # Last training checkpoint
+│           ├── args.yaml   # Training configuration
+│           └── results.csv # Training metrics
 ├── train.py           # Training script
 ├── predict.py         # Inference script
 ├── data.yaml          # Dataset configuration

@@ -1,6 +1,6 @@
 # AI Applications in Textile-Garment Industry
 
-> A comprehensive collection of AI/ML solutions for textile manufacturing, including defect detection, demand forecasting, and worker assistance systems.
+> A comprehensive collection of AI/ML solutions for textile manufacturing, including defect detection, demand forecasting, worker assistance systems, and fashion product classification.
 
 This repository contains various AI/ML applications focused on solving challenges in the textile and garment industry. The projects demonstrate the practical implementation of artificial intelligence in different aspects of textile manufacturing and quality control.
 
@@ -34,10 +34,18 @@ This repository contains various AI/ML applications focused on solving challenge
 - Seasonal pattern recognition
 - Helps in strategic decision making
 
+### 5. Precision Fashion Image Classification
+**Location**: `Precision-fashion-image-classification/`
+- HOG and KNN-based fashion product classification
+- 98% classification accuracy
+- Fast and efficient inference
+- No deep learning required
+- Works with limited computational resources
+
 ## Technology Stack
 
-- **Computer Vision**: YOLOv8, OpenCV
-- **Machine Learning**: PyTorch, scikit-learn
+- **Computer Vision**: YOLOv8, OpenCV, HOG
+- **Machine Learning**: PyTorch, scikit-learn, KNN
 - **Deep Learning**: Neural Networks, Transfer Learning
 - **Data Processing**: Pandas, NumPy
 - **Visualization**: Matplotlib, Plotly
@@ -79,6 +87,7 @@ pip install -r requirements.txt
 ├── Garments Workers AI&ML demo/  # Worker assistance system
 ├── textile-demand-forecasting/   # Demand prediction system
 ├── demand prediction/           # Market analysis system
+├── Precision-fashion-image-classification/  # Fashion product classification
 ├── venv/                        # Virtual environment
 └── README.md                    # This file
 ```
@@ -102,6 +111,12 @@ pip install -r requirements.txt
 - Market trend analysis
 - Inventory optimization
 - Resource planning
+
+### Precision Fashion Classification
+- High accuracy (98%)
+- Fast inference
+- Simple and interpretable model
+- Works with limited resources
 
 ## Contributing
 
