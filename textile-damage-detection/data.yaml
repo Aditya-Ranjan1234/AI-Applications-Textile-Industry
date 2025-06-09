@@ -1,0 +1,13 @@
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['0']
+
+roboflow:
+  workspace: class-ocwne
+  project: textile-defect-ig0ek
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/class-ocwne/textile-defect-ig0ek/dataset/2
