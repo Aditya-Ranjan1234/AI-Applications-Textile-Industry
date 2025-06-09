@@ -1,0 +1,4 @@
+make sure tensor flow is installed
+change into the project directory and 
+run streamlit run app.py  #in app.py make sure it is the correct path to the app.py
+use the image in the folder to show live demo
